@@ -1,4 +1,4 @@
-package api.vlozo.Forum_Hub.domain.topic;
+package api.vlozo.Forum_Hub.domain;
 
 public class Course {
     private Long id;

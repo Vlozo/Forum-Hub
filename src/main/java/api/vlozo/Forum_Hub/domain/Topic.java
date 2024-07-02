@@ -1,6 +1,4 @@
-package api.vlozo.Forum_Hub.domain.topic;
-
-import api.vlozo.Forum_Hub.domain.user.User;
+package api.vlozo.Forum_Hub.domain;
 
 import java.time.LocalDateTime;
 import java.util.List;
