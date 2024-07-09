@@ -1,6 +1,7 @@
 package api.vlozo.Forum_Hub.domain;
 
 import api.vlozo.Forum_Hub.dto.request.CreateTopicDTO;
+import api.vlozo.Forum_Hub.dto.request.UpdateTopicDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -47,5 +48,20 @@ public class Topic {
         this.author = author;
         this.topicStatus = TopicStatus.OPEN;
         this.createdDate = LocalDate.now();
+    }
+
+    public void update(UpdateTopicDTO data, Course course) {
+        if (data.title() != null){
+            this.title = data.title();
+        }
+        if (data.message() != null) {
+            this.message = data.message();
+        }
+        if (data.course_id() != null) {
+            this.course = course;
+        }
+        if (data.status() != null) {
+            this.topicStatus = data.status();
+        }
     }
 }
